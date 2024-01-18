@@ -1,0 +1,121 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: #e3edf7;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skill {
+    width: 160px;
+    height: 160px;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.outer {
+    height: 160px;
+    width: 160px;
+    border-radius: 50%;
+    padding: 20px;
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+                -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+}
+
+.inner {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
+                inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
+                    -0.5px -0.5px 0px rgba(255, 255, 255, 1),
+                    0.5px 0.5px 0px rgba(0, 0, 0, 0.15),
+                    0px 12px 10px -10px rgba(0, 0, 0, 0.05);
+}
+
+#number {
+    font-weight: 600;
+    color: #555;
+}
+
+circle {
+    fill: none;
+    stroke: url(#GradientColor);
+    stroke-width: 20px;
+    stroke-dasharray: 472;
+    stroke-dashoffset: 472; /* Set the initial value */
+}
+
+svg {
+    position: absolute;
+    top: 49%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+input {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 13px;
+    border: 0;
+    border-radius: 10px;
+    text-align: center;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+    width: 160px; 
+}
+
+input:focus {
+    border-color: #2980b9;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 13px;
+    cursor: pointer;
+    background: linear-gradient(to right, #e91e63, #673ab7);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    transition: background 0.3s ease-in-out;
+    width: 160px;
+}
+
+button:hover {
+    background: linear-gradient(to right, #9c27b0, #4a148c); /* Adjust the hover gradient if needed */
+}
+
+
+
+
+
+@keyframes anim {
+    to {
+        stroke-dashoffset: calc(472 - (472 * var(--percentage) / 100));
+    }
+}
+
+@keyframes appear {
+    to {
+        opacity: 1;
+    }
+}
